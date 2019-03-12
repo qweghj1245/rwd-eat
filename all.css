@@ -52,16 +52,17 @@ table {
 .banner .navbar {
     background-color: black;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 6%;
-    padding-left: 6%;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
     padding-top: 16px;
     padding-bottom: 16px;
     position: fixed;
-    left: 0px;
-    right: 0px;
+    width: 100%;
     z-index: 99999;
+    transition-duration: 1s;
+}
+.nav-opacity {
+    opacity: 0.5;
 }
 .navbar h1 a {
     background-image: url('./assets/logo_l(null).svg');
@@ -77,6 +78,7 @@ table {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 200px;
 }
 .navbar li {
     list-style: none;
@@ -85,19 +87,53 @@ table {
 .navbar li a {
     text-decoration: none;
     color: white;
+    display: block;
 }
-.banner .bannerImg {
+.hamburger {
+    display: none;
+}
+.line1 {
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    /* display: none; */
+}
+.l1 {
+    display: none;
+}
+.line2 {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 6px;
+    /* transform: rotate(45deg); */
+    transition-duration: 0.3s;
+}
+.l2 {
+    transform: rotate(45deg);
+}
+.line3 {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 6px;
+    /* transform: rotate(135deg) translateY(200%) translateX(-25%); */
+    transition-duration: 0.3s;
+}
+.l3 {
+    transform: rotate(135deg) translateY(200%) translateX(-25%);
+}
+
+.banner {
+    background-color: #3d1101;
+}
+
+.banner .bannerImg{
     /* padding-top: 48px; */
     height: 420px;
     background-image: url('./assets/header_desktop.png');
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
-    /* z-index: -1; */
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #3d1101;
     display: flex;
     justify-content: center;
     color: white;
@@ -119,13 +155,84 @@ table {
     margin-right: 5px;
     margin-left: 5px;
 }
+.inner > h2 {
+    font-size: 36px;
+}
+@media (max-width:1024px) {
+    .banner .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 40px;
+    }
+    .navbar ul {
+        margin-right: 40px;
+    }
+    .navbar li {
+        width: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width:768px) {
+    .wrap {
+        overflow: hidden;
+    }
+}
 
-
+@media (max-width:414px) {
+    .banner .bannerImg {
+        background: url('./assets/Bitmap.png');
+        background-repeat: no-repeat;
+    }
+    .banner .navbar {
+        display: flex;
+        padding-left: 20px;
+    }
+    .hamburger {
+        display: block;
+        margin-right: 35px;
+        cursor: pointer;
+    }
+    .navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 58px;
+        z-index: 999999900;
+        left: 0;
+        right: 0;
+        margin: 0;
+        margin-top: -2px;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        transition: all 1s;
+    }
+    .navbar li {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 60px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .navbar li:hover {
+        background-color: #fff;
+        color: black;
+        transition: all 1s;
+    }
+    .navbar li:hover a{
+        color: black;
+    }
+    .menushow .menu{
+        max-height: 360px;
+    }
+}
 
 /* container */
 
 .container {
-    padding-top: 420px;
+    /* padding-top: 420px; */
     display: flex;
     justify-content: center;
     background-color: #efe9e7;
@@ -175,7 +282,6 @@ table {
 }
 .box {
     width: 300px;
-    /* border: solid 1px; */
     margin-right: 20px;
     margin-left: 20px;
 }
@@ -199,6 +305,47 @@ table {
     padding-top: 11px;
 }
 
+@media (max-width: 1024px) {
+    .box .boxintro{
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }    
+}
+@media (max-width:768px) {
+    .box {
+        width: auto;
+    }
+}
+@media (max-width: 414px) {
+    .wrap {
+        overflow: hidden;
+    }
+    .container .innertitle {
+        margin-bottom: 0;
+    }
+    .threeintro {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+    .box {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .inner > h2 {
+        font-size: 32px;
+    }
+}
+@media (max-width:375px) {
+    .inner > h2 {
+        font-size: 28px;
+    }
+}
+
+
 /* todaychef */
 
 .todaychef {
@@ -220,6 +367,35 @@ table {
     width: 410px;
     text-align: left;
     padding-top: 16px;
+}
+
+@media (max-width:768px) {
+    .chefintro p {
+        width: auto;
+        padding-right: 10px;
+    }
+}
+@media (max-width:414px) {
+    .todaychef {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
+    .chefintro {
+        padding-top: 40px;
+    }
+    .chefintro h3, .chefintro h4{
+        width: auto;
+        padding-left: 20px;
+    }
+    .chefintro p{
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
 }
 
 /* peoplethink */
@@ -273,6 +449,21 @@ table {
     text-align: end;
     padding-right: 20px;
     padding-top: 16px;
+}
+@media (max-width: 768px) {
+    .block {
+        width: auto;
+    }
+    .block p {
+        width: auto;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 414px) {
+    .personthink {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -348,6 +539,28 @@ table {
 .send {
     background-color: #F56C23;
 }
+@media (max-width:768px) {
+    .mapform .form {
+        width: auto;
+    }
+    .form > input {
+        width: auto;
+    }
+    .map {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width:414px) {
+    .mapform > .inner {
+        display: flex;
+        flex-direction: column;
+    }
+    .mapform .form {
+        width: auto;
+        margin-right: 20px;
+    }
+}
 
 
 /* footer */
@@ -386,11 +599,35 @@ table {
 .outerlink .fab {
     padding-left: 11px;
 }
+@media (max-width:768px) {
+    .content1 {
+        margin-left: 20px;
+    }
+    .content3 {
+        margin-right: 20px;
+    }
+}
+@media (max-width:414px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        margin-left: 50px;
+    }
+    .content1, .content2{
+        display: block;
+        margin-left: 20px;
+    }
+    .content2, .content3 {
+        margin-top: 30px;
+    }
+
+}
 
 /* shop.html */
 
 .main {
-    padding-top: 420px;
     padding-bottom: 30px;
     color: #3D1101;
     background-color: #EFE9E7;
@@ -411,8 +648,7 @@ table {
     border-bottom: solid 1px #3D1101;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 99px;
+    width: 200px;
     cursor: pointer;
 }
 .sidebar li a {
@@ -426,6 +662,14 @@ table {
     color: white;
 }
 
+@media (max-width: 1024px) {
+    .sidebar li {
+        margin-right: 0;
+    }
+}
+
+
+
 .searchbar {
     margin-top: 35px;
     margin-right: 40px;
@@ -435,7 +679,7 @@ table {
     margin-top: 8px;
     font-size: 17px;
     border-color: #3D1101;
-    margin-left: 20px;
+    margin-left: 80px;
     background: transparent;
 }
 .searchbar button {
@@ -478,6 +722,7 @@ table {
 }
 
 
+
 /* products */
 
 .products {
@@ -485,8 +730,31 @@ table {
     flex-direction: row;
     flex-wrap: wrap;
     width: 800px;
-    margin-left: 20px;
+    margin-left: 80px;
 }
+
+@media (max-width: 768px) {
+    .sidebar{
+        margin-left: 50px;
+    }
+    .products {
+        width: 480px;
+        margin-left: 40px;
+    }
+    .searchbar input[type="text"]{
+        padding: 4px 80px 4px 4px;
+        margin-left: 40px;
+    }
+    .searchbar .gocart {
+        margin-left: 10px;
+        padding-right: 8px;
+    }
+    .searchbar .fa-shopping-cart {
+        padding-left: 8px;
+    }
+}
+
+
 .pbox {
     width: 220px;
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
@@ -616,11 +884,68 @@ table {
     transform: rotate(220deg);
 }
 
+@media (max-width:414px) {
+    .main > .inner {
+        display: flex;   
+        flex-direction: column;
+    }
+    .searchbar {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .searchbar input[type="text"]{
+        padding: 4px 70px 4px 4px;
+    }
+    .searchbar .gocart {
+        margin-left: 220px;
+        padding-right: 16px;
+    }
+    .searchbar .fa-shopping-cart {
+        padding-left: 16px;
+        margin-top: 20px;
+    }
+    .sidebar {
+        margin-left: 60px;
+    }
+    .sidebar li {
+        width: 300px;
+    }
+    .products {
+        display: flex;
+        flex-direction: column;
+        width: 212px;
+        margin: 0 auto;
+    }
+}
+@media (max-width:400px) {
+    .searchbar input[type="text"]{
+        padding: 4px 60px 4px 4px;
+    }
+}
+@media (max-width:375px) {
+    .searchbar {
+        margin-left: 0px;
+        margin-right: 0;
+    }
+    .searchbar input[type="text"]{
+        padding: 4px 70px 4px 4px;
+    }
+    .searchbar .gocart {
+        margin-left: 220px;
+    }
+    .sidebar {
+        margin-left: 40px;
+    }
+    .sidebar li {
+        width: 300px;
+    }
+}
+
 
 /* center */
 
 .center {
-    padding-top: 470px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
@@ -693,6 +1018,10 @@ table {
     color: #FF5E45;
     margin-bottom: 30px;
 }
+.login h5 a {
+    text-decoration: none;
+    color: #FF5E45;
+}
 .btn-groups {
     display: flex;
     justify-content: center;
@@ -714,6 +1043,7 @@ table {
 .register a {
     text-decoration: none;
     color: #fff;
+    display: block;
 }
 .log {
     background: #F56C23;
@@ -761,4 +1091,18 @@ table {
 }
 .form .wrapper input {
     width: 247px;
+}
+
+@media (max-width: 414px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .reg .terms {
+        padding-left: 0;
+        padding-top: 25px;
+    }
+    .reg2 {
+        margin-right: 0;
+    }
 }
