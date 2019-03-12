@@ -690,7 +690,6 @@ table {
     border: none;
     background-color: #3D1101;
     color: #fff;
-    transform: translate(-5.5px, 0);
     text-align: center;
     cursor: pointer;
 }
@@ -895,10 +894,10 @@ table {
         margin-left: 20px;
     }
     .searchbar input[type="text"]{
-        padding: 4px 60px 4px 4px;
+        padding: 4px 70px 4px 4px;
     }
     .searchbar .gocart {
-        margin-left: 210px;
+        margin-left: 220px;
         padding-right: 16px;
     }
     .searchbar .fa-shopping-cart {
@@ -916,6 +915,9 @@ table {
         flex-direction: column;
         width: 212px;
         margin: 0 auto;
+    }
+    .searchbar button {
+        width: auto;
     }
 }
 @media (max-width:400px) {
