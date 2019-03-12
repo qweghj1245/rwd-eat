@@ -692,7 +692,11 @@ table {
     color: #fff;
     text-align: center;
     cursor: pointer;
-    transform: translateX(-50%);
+    transform: translateX(-5.5px);
+}
+.fa-search {
+    display: inline-block;
+    width: 100%;
 }
 .searchbar .gocart {
     border-right: solid 1px;
