@@ -895,10 +895,10 @@ table {
         margin-left: 20px;
     }
     .searchbar input[type="text"]{
-        padding: 4px 70px 4px 4px;
+        padding: 4px 60px 4px 4px;
     }
     .searchbar .gocart {
-        margin-left: 220px;
+        margin-left: 210px;
         padding-right: 16px;
     }
     .searchbar .fa-shopping-cart {
