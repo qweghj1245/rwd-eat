@@ -692,6 +692,7 @@ table {
     color: #fff;
     text-align: center;
     cursor: pointer;
+    transform: translateX(-50%);
 }
 .searchbar .gocart {
     border-right: solid 1px;
@@ -915,9 +916,6 @@ table {
         flex-direction: column;
         width: 212px;
         margin: 0 auto;
-    }
-    .searchbar button {
-        width: auto;
     }
 }
 @media (max-width:400px) {
