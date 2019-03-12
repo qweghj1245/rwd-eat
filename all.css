@@ -691,6 +691,7 @@ table {
     background-color: #3D1101;
     color: #fff;
     transform: translate(-5.5px, 0);
+    text-align: center;
     cursor: pointer;
 }
 .searchbar .gocart {
