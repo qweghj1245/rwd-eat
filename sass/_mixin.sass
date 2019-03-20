@@ -1,0 +1,16 @@
+@mixin ipadPro
+    @media (max-width: 1024px)
+        @content
+@mixin ipad
+    @media (max-width: 768px)
+        @content
+@mixin iphone8Pro
+    @media (max-width: 414px)
+        @content
+@mixin iphone8
+    @media (max-width:375px)
+        @content
+
+@mixin fix
+    @media (min-width: 768px)
+        @content                             

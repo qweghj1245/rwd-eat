@@ -1,0 +1,874 @@
+@import 'reset'
+@import 'mixin'
+
+$main: #8789C0
+$bgc: #F4FAFF
+$btn-color: #7CC6FE
+
+
+.wrap 
+    max-width: 100%
+    +ipad
+        overflow: hidden
+
+/* banner */
+
+.banner .navbar 
+    background-color: $bgc
+    display: flex
+    justify-content: space-evenly
+    padding-top: 16px
+    padding-bottom: 16px
+    position: fixed
+    width: 100%
+    z-index: 99999
+    transition-duration: 1s
+    +ipadPro
+        width: 100%
+        display: flex
+        justify-content: space-between
+        padding-left: 40px
+    +iphone8Pro
+        display: flex
+        padding-left: 20px
+    ul 
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-left: 200px
+        +ipadPro
+            margin-right: 40px
+        +iphone8Pro
+            max-height: 0
+            overflow: hidden
+            position: absolute
+            top: 58px
+            z-index: 999999900
+            left: 0
+            right: 0
+            margin: 0
+            margin-top: -2px
+            display: flex
+            flex-direction: column
+            background-color: $bgc
+            transition: all 1s
+        li 
+            list-style: none
+            padding-left: 50px
+            +ipadPro
+                width: 50px
+                padding-left: 15px
+                padding-right: 15px
+            +iphone8Pro
+                padding-top: 20px
+                padding-bottom: 20px
+                padding-left: 60px
+                cursor: pointer
+                width: 100%
+            a
+                text-decoration: none
+                color: $main
+                display: block
+        li:hover 
+            +iphone8Pro
+                background-color: $main
+                color: $bgc
+                transition: all 1s
+        li:hover a
+            +iphone8Pro
+                color: $bgc
+    h1 a 
+        text-decoration: none
+        color: $main
+        font-size: 24px
+        font-weight: 900
+
+.nav-opacity 
+    opacity: 0.5
+
+.cimage a 
+    text-decoration: none
+    color: $bgc
+    font-size: 44px
+    font-weight: 900
+
+.hamburger 
+    display: none
+    +iphone8Pro
+        display: block
+        margin-right: 35px
+        cursor: pointer
+    .line1 
+        background-color: $main
+        width: 25px
+        height: 3px
+    .line2 
+        width: 25px
+        height: 3px
+        background-color: $main
+        margin-top: 6px
+        transition-duration: 0.3s
+    .line3 
+        width: 25px
+        height: 3px
+        background-color: $main
+        margin-top: 6px
+        transition-duration: 0.3s
+
+.l1 
+    display: none
+.l2 
+    transform: rotate(45deg)
+.l3 
+    transform: rotate(135deg) translateY(200%) translateX(-25%)
+
+
+.banner 
+    background-color: #3d1101
+    .bannerImg
+        height: 420px
+        background-image: url('https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        display: flex
+        justify-content: center
+        color: white
+        text-align: center
+        +iphone8Pro
+            background-image: url('../newassets/newhead.png')
+            background-repeat: no-repeat
+            background-size: cover
+        .title 
+            display: flex
+            align-items: center
+            > .inner 
+                background: rgba(0,0,0,0.35)
+                padding: 20px 22px 20px 20px
+                > h2 
+                    font-size: 36px
+        .innercontent 
+            padding-top: 16px
+            padding-bottom: 6px
+            .fa-utensils 
+                margin-right: 5px
+                margin-left: 5px
+
+.menushow .menu
+    +iphone8Pro
+        max-height: 360px
+    
+
+
+/* container */
+
+.container 
+    display: flex
+    justify-content: center
+    background-color: $bgc
+    z-index: -1
+    color: #3d1101
+    .inner 
+        display: flex
+        flex-direction: column
+        position: relative
+        margin-bottom: 50px
+        > h2 
+            +iphone8Pro
+                font-size: 32px
+            +iphone8
+                font-size: 28px
+
+    .innertitle 
+        font-size: 20px
+        margin-top: 50px
+        margin-bottom: 31px
+        text-align: center
+        position: relative
+        +iphone8Pro
+            margin-bottom: 0
+
+    h3 
+        padding-bottom: 15px
+
+    .innertitle::before 
+        content: ''
+        display: block
+        width: 122px
+        height: 2px
+        background-color: #ccc
+        position: absolute
+        top: 35%
+        left: 28%
+
+    .innertitle::after 
+        content: ''
+        display: block
+        width: 122px
+        height: 2px
+        background-color: #ccc
+        position: absolute
+        top: 35%
+        right: 28%
+
+
+.threeintro 
+    display: flex
+    flex-direction: row
+    +iphone8Pro
+        display: flex
+        flex-direction: column
+        margin-right: 50px
+.box 
+    width: 300px
+    margin-right: 20px
+    margin-left: 20px
+    +ipad
+        width: auto
+    +iphone8Pro
+        width: 100%
+        margin-top: 50px
+
+    .boximage 
+        display: flex
+        justify-content: center
+
+        img
+            width: 150px
+            height: 150px
+
+    .boxintro 
+        display: flex
+        flex-direction: column
+        width: 260px
+        text-align: center
+        padding-left: 20px
+        padding-top: 20px
+        +ipadPro
+            width: auto
+            padding-left: 20px
+            padding-right: 20px
+            margin-right: 0px
+            margin-left: 0px
+        p
+            text-align: justify
+            padding-top: 11px
+
+/* todaychef */
+
+.todaychef 
+    display: flex
+    justify-content: center
+    background-color: $main
+    color: #fff
+    +iphone8Pro
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        padding-bottom: 30px
+    .chefimage 
+        padding-right: 25px
+        width: auto
+    .chefintro 
+        padding-top: 81px
+        +iphone8Pro
+            padding-top: 40px
+        h3
+            font-size: 20px
+            +iphone8Pro
+                width: auto
+                padding-left: 20px
+        h4
+            +iphone8Pro
+                width: auto
+                padding-left: 20px
+        p
+            width: 410px
+            text-align: left
+            padding-top: 16px
+            +ipad
+                padding-right: 10px
+            +iphone8Pro
+                width: auto
+                padding-left: 20px
+                padding-right: 20px
+
+/* peoplethink */
+
+.peoplethink 
+    display: flex
+    justify-content: center
+    padding-top: 50px
+    background-color: $bgc
+    color: #3d1101
+    > .inner 
+        display: flex
+        flex-direction: column
+    .thinktitle 
+        text-align: center
+        font-size: 24px
+        margin-bottom: 32px
+    .personthink 
+        display: flex
+        flex-direction: row
+        padding-bottom: 50px
+        +iphone8Pro
+            display: flex
+            flex-direction: column
+        .block 
+            width: 320px
+            padding-left: 5px
+            padding-right: 5px
+            +ipad
+                width: auto
+            p
+                padding-left: 85px
+                width: 220px
+                line-height: 25px
+                +ipad      
+                    width: auto
+                    padding-right: 15px
+            .imgcontent 
+                display: flex
+                flex-direction: row
+                img 
+                    border-radius: 50%
+                    margin-right: 13px
+                    margin-left: 5px
+                    margin-top: 20px
+                .ptitle 
+                    padding-top: 45px
+        .pname 
+            text-align: end
+            padding-right: 20px
+            padding-top: 16px
+
+/* mapform */
+
+.mapform 
+    display: flex
+    flex-direction: column
+    padding-top: 50px
+    padding-bottom: 50px
+    background-color: #FAFAFA
+    color: #3d1101
+
+    > .inner 
+        display: flex
+        justify-content: center
+        +iphone8Pro
+            display: flex
+            flex-direction: column
+    .map
+        +ipad
+            display: flex
+            justify-content: center
+    .map, .form 
+        padding-top: 38px
+
+    h3 
+        text-align: center
+        font-size: 24px
+    .form 
+        display: flex
+        flex-direction: column
+        margin-left: 20px
+        width: 450px
+        +ipad
+            width: auto
+        +iphone8Pro
+            width: auto
+            margin-right: 20px
+
+        label 
+            padding-bottom: 11px
+            padding-top: 12px
+
+        input 
+            width: 441px
+            height: 26px
+            padding-left: 14px
+            font-size: 16px
+            border-radius: 5px
+            border: solid 1px #ccc
+            +ipad
+                width: auto
+        .radiocheck 
+            display: flex
+            height: 10px 
+            label 
+                padding-right: 36px
+                width: 45px
+                display: flex
+                padding-top: 0px
+
+                span 
+                    padding-top: 8px
+        .btn-group 
+            display: flex
+            margin-top: 35px
+            justify-content: flex-end
+            input 
+                width: 70px
+                margin-left: 11px
+                padding: 0
+                text-align: center
+                color: white
+                border: none
+            .cancel 
+                background-color: #a09e9e
+
+            .send 
+                background-color: $btn-color
+
+/* footer */
+
+.footer 
+    display: flex  
+    justify-content: center
+    background-color: $main  
+    padding-top: 50px
+    padding-bottom: 50px
+    color: $bgc
+    +iphone8Pro
+        display: flex
+        flex-direction: column
+
+    .content 
+        width: 300px
+        margin-right: 10.5px
+        margin-left: 10.5px
+        +iphone8Pro
+            margin-left: 50px
+        h2 
+            font-size: 24px
+            padding-bottom: 16px
+    .content1
+        +ipad
+            margin-left: 20px
+    .content2 
+        margin-right: 50px
+    .content3
+        +ipad
+            margin-right: 20px
+        +fix
+            width: 400px      
+        .cimage
+            display: flex
+            justify-content: flex-end
+            padding-bottom: 22px
+        .outerlink
+            display: flex
+            justify-content: flex-end
+            font-size: 36px
+            .fab 
+                padding-left: 11px   
+    .content1, .content2
+        +iphone8Pro
+            display: block
+            margin-left: 20px
+
+    .content2, .content3 
+        +iphone8Pro
+            margin-top: 30px
+
+/* shop.html */
+
+.main 
+    padding-bottom: 30px
+    color: $main
+    background-color: $bgc
+    > .inner 
+        display: flex   
+        justify-content: center 
+        +iphone8Pro
+            display: flex   
+            flex-direction: column
+    .sidebar 
+        margin-top: 52px
+        margin-left: 100px
+        +ipad
+            margin-left: 50px
+        +iphone8Pro
+            margin-left: 60px
+        +iphone8
+            margin-left: 40px
+
+        span, .fas 
+            font-size: 20px
+            padding-bottom: 25px
+        li 
+            border-bottom: solid 1px $main
+            padding-top: 10px
+            padding-bottom: 10px
+            width: 200px
+            cursor: pointer
+            +ipadPro
+                margin-right: 0
+            +iphone8Pro
+                width: 300px
+            +iphone8
+                width: 300px
+            a 
+                color: $main
+                text-decoration: none
+        li:hover  
+            background-color: $main
+        li:hover .a
+            color: white
+    
+
+.searchbar 
+    margin-top: 35px
+    margin-right: 40px
+    +iphone8Pro
+        margin-top: 20px
+        margin-left: 20px
+    +iphone8
+        margin-left: 0px
+        margin-right: 0
+
+    input[type="text"]
+        padding: 4px 225px 4px 4px
+        margin-top: 8px
+        font-size: 17px
+        border-color: $main
+        margin-left: 80px
+        background: transparent
+        +ipad
+            padding: 4px 80px 4px 4px
+            margin-left: 40px
+        +iphone8Pro
+            padding: 4px 70px 4px 4px
+        +iphone8
+            padding: 4px 70px 4px 4px
+    button 
+        padding-top: 4px
+        padding-bottom: 6px
+        width: 36px
+        font-size: 19px
+        border: none
+        background-color: $main
+        color: #fff
+        text-align: center
+        cursor: pointer
+        transform: translateX(-5.5px)
+    .fa-search 
+        display: inline-block
+        width: 100%
+    .gocart 
+        border-right: solid 1px
+        margin-left: 120px
+        padding-right: 16px
+        +ipad
+            margin-left: 10px
+            padding-right: 8px
+        +iphone8Pro
+            margin-left: 220px
+            padding-right: 16px
+        +iphone8
+            margin-left: 220px
+    .fa-shopping-cart 
+        padding-left: 16px
+        font-size: 27px
+        position: relative
+        +ipad
+        padding-left: 8px
+        +iphone8Pro
+            padding-left: 16px
+            margin-top: 20px
+    .fa-shopping-cart::after 
+        content: '1'
+        display: block
+        position: absolute
+        right: -20%
+        top: -30%
+        font-size: 16px
+        width: 16px
+        border: solid 1px #fff
+        background-color: #FF5E45
+        color: #fff
+        text-align: center
+        border-radius: 50%
+    span 
+        cursor: pointer
+
+/* products */
+
+.products 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    width: 800px
+    margin-left: 80px
+    +ipad
+        width: 480px
+        margin-left: 40px
+    +iphone8Pro
+        display: flex
+        flex-direction: column
+        width: 212px
+        margin: 0 auto
+    .pbox 
+        width: 220px
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16)
+        margin-right: 20px
+        margin-top: 30px
+        text-align: center
+        position: relative
+        h4
+            font-size: 20px
+
+        h5 
+            font-size: 12px
+            padding-bottom: 8px
+            position: relative
+
+        h5::before 
+            content: ''
+            position: absolute
+            border-bottom: solid 1px
+            height: 1px
+            left: 30%
+            bottom: 0
+            width: 40%
+
+        .price 
+            margin-top: 30px
+            margin-bottom: 23px
+            font-size: 20px
+        .addcart 
+            width: 91%
+            border: solid 2px $btn-color
+            color: $btn-color
+            background-color: $bgc
+            font-size: 16px
+            margin-bottom: 10px
+            cursor: pointer
+        .fa-shopping-cart 
+            padding-right: 10px
+        .fa-heart 
+            display: flex
+            color: #fff
+            font-size: 23px
+            padding-left: 10px
+            padding-top: 10px
+            cursor: pointer
+    .pbox:hover 
+        transform: scale(1.1)
+        transition-duration: 0.5s
+    .pbox1 .pimage 
+        height: 120px
+        margin-bottom: 11px
+        background: url('https://images.unsplash.com/photo-1535567465397-7523840f2ae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2028&q=80')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+    .pbox2 .pimage 
+        height: 120px
+        margin-bottom: 11px
+        background: url('https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+    .pbox3 .pimage 
+        height: 120px
+        margin-bottom: 11px
+        background: url('https://images.unsplash.com/photo-1522704483886-8a0eedc2b915?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+    .pbox4 .pimage 
+        height: 120px
+        margin-bottom: 11px
+        background: url('https://images.unsplash.com/photo-1455853739633-8c94c03d8121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+.wrap-ribbon 
+    position: absolute
+    /* background-color: #fff */
+    width: 90px
+    height: 90px
+    text-align: center
+    right: -2%
+    top: -2%
+    overflow: hidden
+    .ribbon 
+        position: relative
+        background-color: #00CC99
+        padding: 5px
+        width: 90px
+        top: 15%
+        right: -15%
+        transform: rotate(45deg)
+        font-size: 14px
+        color: #fff
+        font-weight: 600
+    .ribbon:before 
+        content: ""
+        border-top: 6px solid rgb(0, 172, 129)
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        position: absolute
+        bottom: -5px
+        left: -2px
+        transform: rotate(135deg)
+    .ribbon:after 
+        content: ""
+        border-top: 6px solid rgb(0, 172, 129)
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        position: absolute
+        bottom: -4px
+        right: -4px
+        transform: rotate(220deg)
+
+/* center */
+
+.center 
+    padding-top: 50px
+    display: flex
+    justify-content: center
+    padding-bottom: 50px
+    background-color: $bgc
+    > .inner 
+        display: flex
+        justify-content: center
+        flex-direction: column
+        > a 
+            text-decoration: none
+            font-size: 44px
+            font-weight: 900
+            color: $main
+            text-align: center
+            margin-bottom: 20px
+        > h3 
+            font-size: 20px
+            color: $main
+            margin-top: 5px
+            margin-bottom: 35px
+            text-align: center
+            font-weight: 900
+    .login
+        display: flex
+        flex-direction: column
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16)
+        border-top: solid 3px $btn-color
+        padding: 15px
+        color: $main
+        > h3 
+            margin-bottom: 16px
+            text-align: center
+            font-weight: 900
+        .wrapper 
+            position: relative
+            input 
+                width: 230px
+                padding-top: 6px
+                padding-bottom: 6px
+                padding-left: 35px
+                border: solid 1px #ccc
+                border-radius: 5px
+
+            .far 
+                position: absolute
+                left: 4%
+                font-size: 15px
+                top: 50%
+                transform: translateY(-100%)
+                color: $main
+            
+            .fa-lock 
+                position: absolute
+                left: 4%
+                font-size: 15px
+                top: 50%
+                transform: translateY(-100%)
+                color: $main
+
+            #email 
+                margin-bottom: 15px
+
+            #password 
+                margin-bottom: 15px
+        label 
+            padding-bottom: 5px
+        h5, .form h5 
+            font-size: 14px
+            color: $btn-color
+            margin-bottom: 30px
+        h5 a 
+            text-decoration: none
+            color: $btn-color
+        .btn-groups 
+            display: flex
+            justify-content: center
+            button
+                width: 125px
+                margin-left: 5px
+                margin-right: 5px
+                padding: 8px 20px 8px 20px
+                border: none
+                color: #fff
+                font-size: 14px
+                cursor: pointer
+            .register 
+                background: rgba(0,0,0,0.35)
+                border-radius: 3px
+                a 
+                    text-decoration: none
+                    color: #fff
+                    display: block
+            .log 
+                background: $btn-color
+                border-radius: 3px
+
+/* register */
+
+.reg 
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16)
+    border-top: solid 3px $btn-color
+    padding: 15px
+    color: $main
+    h3 
+        text-align: center
+
+    .flex 
+        display: flex
+        +iphone8Pro
+            display: flex
+            flex-direction: column
+        .terms 
+            width: 285px
+            padding-top: 50px
+            padding-left: 15px
+            +iphone8Pro
+                padding-left: 0
+                padding-top: 25px
+            p 
+                padding-right: 10px
+.reg2 
+    width: 125px
+    margin-left: 5px
+    margin-right: 5px
+    padding: 8px 20px 8px 20px
+    border: none
+    color: #fff
+    font-size: 14px
+    cursor: pointer
+    background: $btn-color
+    border-radius: 3px
+    float: right
+    +iphone8Pro
+        margin-right: 0
+
+.form .wrapper
+    margin-top: 5px
+
+.form .wrapper input 
+    width: 247px
+
+    
