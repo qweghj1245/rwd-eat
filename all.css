@@ -50,7 +50,7 @@ table {
 /* banner */
 
 .banner .navbar {
-    background-color: black;
+    background-color: #F4FAFF;
     display: flex;
     /* flex-direction: row; */
     justify-content: space-evenly;
@@ -65,14 +65,18 @@ table {
     opacity: 0.5;
 }
 .navbar h1 a {
-    background-image: url('./assets/logo_l(null).svg');
-    background-size: contain;
+    /* background-image: url('./assets/logo_l(null).svg'); */
+    /* background-size: contain;
     display: block;
     width: 120px;
     height: 24px;
     text-indent: 101%;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
+    text-decoration: none;
+    color: #8789C0;
+    font-size: 24px;
+    font-weight: 900;
 }
 .navbar ul {
     display: flex;
@@ -84,16 +88,22 @@ table {
     list-style: none;
     padding-left: 50px;
 }
-.navbar li a {
+.navbar li a{
     text-decoration: none;
-    color: white;
+    color: #8789C0;
     display: block;
+}
+.cimage a {
+    text-decoration: none;
+    color: #F4FAFF;
+    font-size: 44px;
+    font-weight: 900;
 }
 .hamburger {
     display: none;
 }
 .line1 {
-    background-color: #fff;
+    background-color: #8789C0;
     width: 25px;
     height: 3px;
     /* display: none; */
@@ -104,7 +114,7 @@ table {
 .line2 {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #8789C0;
     margin-top: 6px;
     /* transform: rotate(45deg); */
     transition-duration: 0.3s;
@@ -115,7 +125,7 @@ table {
 .line3 {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #8789C0;
     margin-top: 6px;
     /* transform: rotate(135deg) translateY(200%) translateX(-25%); */
     transition-duration: 0.3s;
@@ -131,8 +141,9 @@ table {
 .banner .bannerImg{
     /* padding-top: 48px; */
     height: 420px;
-    background-image: url('./assets/header_desktop.png');
+    background-image: url('https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -182,8 +193,9 @@ table {
 
 @media (max-width:414px) {
     .banner .bannerImg {
-        background: url('./assets/Bitmap.png');
+        background: url('./newassets/newhead.png');
         background-repeat: no-repeat;
+        background-size: cover;
     }
     .banner .navbar {
         display: flex;
@@ -206,7 +218,7 @@ table {
         margin-top: -2px;
         display: flex;
         flex-direction: column;
-        background-color: black;
+        background-color: #F4FAFF;
         transition: all 1s;
     }
     .navbar li {
@@ -217,12 +229,12 @@ table {
         width: 100%;
     }
     .navbar li:hover {
-        background-color: #fff;
-        color: black;
+        background-color: #8789C0;
+        color: #F4FAFF;
         transition: all 1s;
     }
     .navbar li:hover a{
-        color: black;
+        color: #F4FAFF;
     }
     .menushow .menu{
         max-height: 360px;
@@ -235,7 +247,7 @@ table {
     /* padding-top: 420px; */
     display: flex;
     justify-content: center;
-    background-color: #efe9e7;
+    background-color: #F4FAFF;
     z-index: -1;
     color: #3d1101;
 }
@@ -289,8 +301,9 @@ table {
     display: flex;
     justify-content: center;
 }
-.box img {
-    border-radius: 50%;
+.boximage img{
+    width: 150px;
+    height: 150px;
 }
 .box .boxintro {
     display: flex;
@@ -351,7 +364,7 @@ table {
 .todaychef {
     display: flex;
     justify-content: center;
-    background-color: #3d1101;
+    background-color: #8789C0;
     color: #fff;
 }
 .chefimage {
@@ -404,7 +417,7 @@ table {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    background-color: #efe9e7;
+    background-color: #F4FAFF;
     color: #3d1101;
 }
 .peoplethink > .inner {
@@ -537,7 +550,7 @@ table {
     background-color: #a09e9e;
 }
 .send {
-    background-color: #F56C23;
+    background-color: #7CC6FE;
 }
 @media (max-width:768px) {
     .mapform .form {
@@ -568,10 +581,10 @@ table {
 .footer {
     display: flex;  
     justify-content: center;
-    background-color: #efe9e7;  
+    background-color: #8789C0;  
     padding-top: 50px;
     padding-bottom: 50px;
-    color:#3d1101;
+    color:#F4FAFF;
 }
 
 .content {
@@ -629,8 +642,8 @@ table {
 
 .main {
     padding-bottom: 30px;
-    color: #3D1101;
-    background-color: #EFE9E7;
+    color: #8789C0;
+    background-color: #F4FAFF;
 }
 .main > .inner {
     display: flex;   
@@ -645,18 +658,18 @@ table {
     padding-bottom: 25px;
 }
 .sidebar li {
-    border-bottom: solid 1px #3D1101;
+    border-bottom: solid 1px #8789C0;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 200px;
     cursor: pointer;
 }
 .sidebar li a {
-    color: #3D1101;
+    color: #8789C0;
     text-decoration: none;
 }
 .sidebar li:hover  {
-    background-color: #3D1101;
+    background-color: #8789C0;
 }
 .sidebar li:hover .a{
     color: white;
@@ -678,7 +691,7 @@ table {
     padding: 4px 225px 4px 4px;
     margin-top: 8px;
     font-size: 17px;
-    border-color: #3D1101;
+    border-color: #8789C0;
     margin-left: 80px;
     background: transparent;
 }
@@ -688,7 +701,7 @@ table {
     width: 36px;
     font-size: 19px;
     border: none;
-    background-color: #3D1101;
+    background-color: #8789C0;
     color: #fff;
     text-align: center;
     cursor: pointer;
@@ -796,9 +809,9 @@ table {
 }
 .addcart {
     width: 91%;
-    border: solid 2px #FF5E45;
-    color: #FF5E45;
-    background-color: #EFE9E7;
+    border: solid 2px #7CC6FE;
+    color: #7CC6FE;
+    background-color: #F4FAFF;
     font-size: 16px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -817,7 +830,7 @@ table {
 .pbox1 .pimage {
     height: 120px;
     margin-bottom: 11px;
-    background: url('./assets/product_1.png');
+    background: url('https://images.unsplash.com/photo-1535567465397-7523840f2ae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2028&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -825,7 +838,7 @@ table {
 .pbox2 .pimage {
     height: 120px;
     margin-bottom: 11px;
-    background: url('./assets/product_2.png');
+    background: url('https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -833,7 +846,7 @@ table {
 .pbox3 .pimage {
     height: 120px;
     margin-bottom: 11px;
-    background: url('./assets/product_3.png');
+    background: url('https://images.unsplash.com/photo-1522704483886-8a0eedc2b915?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -841,7 +854,7 @@ table {
 .pbox4 .pimage {
     height: 120px;
     margin-bottom: 11px;
-    background: url('./assets/product_4.png');
+    background: url('https://images.unsplash.com/photo-1455853739633-8c94c03d8121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -954,16 +967,23 @@ table {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-    background-color: #EFE9E7;
+    background-color: #F4FAFF;
 }
 .center > .inner {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+.center > .inner > a {
+    text-decoration: none;
+    font-size: 44px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom:20px;
+}
 .inner > h3 {
     font-size: 20px;
-    color: #3D1101;
+    color: #8789C0;
     margin-top: 5px;
     margin-bottom: 35px;
     text-align: center;
@@ -973,9 +993,9 @@ table {
     display: flex;
     flex-direction: column;
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
-    border-top: solid 3px #FF5E45;
+    border-top: solid 3px #7CC6FE;
     padding: 15px;
-    color: #3D1101;
+    color: #8789C0;
 }
 .login > h3 {
     margin-bottom: 16px;
@@ -1002,7 +1022,7 @@ table {
     font-size: 15px;
     top: 50%;
     transform: translateY(-100%);
-    color: #3D1101;
+    color: #8789C0;
 } 
 .wrapper .fa-lock {
     position: absolute;
@@ -1010,7 +1030,7 @@ table {
     font-size: 15px;
     top: 50%;
     transform: translateY(-100%);
-    color: #3D1101;
+    color: #8789C0;
 }
 .wrapper #email {
     margin-bottom: 15px;
@@ -1020,12 +1040,12 @@ table {
 }
 .login h5, .form h5 {
     font-size: 14px;
-    color: #FF5E45;
+    color: #7CC6FE;
     margin-bottom: 30px;
 }
 .login h5 a {
     text-decoration: none;
-    color: #FF5E45;
+    color: #7CC6FE;
 }
 .btn-groups {
     display: flex;
@@ -1051,7 +1071,7 @@ table {
     display: block;
 }
 .log {
-    background: #F56C23;
+    background: #7CC6FE;
     border-radius: 3px;
 }
 
@@ -1060,9 +1080,9 @@ table {
 
 .reg {
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
-    border-top: solid 3px #FF5E45;
+    border-top: solid 3px #7CC6FE;
     padding: 15px;
-    color: #3D1101;
+    color: #8789C0;
 }
 .reg h3 {
     text-align: center;
@@ -1087,7 +1107,7 @@ table {
     color: #fff;
     font-size: 14px;
     cursor: pointer;
-    background: #F56C23;
+    background: #7CC6FE;
     border-radius: 3px;
     float: right;
 }
